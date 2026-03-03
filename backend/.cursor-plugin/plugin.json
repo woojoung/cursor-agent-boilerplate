@@ -6,7 +6,7 @@
     "name": "chae3229",
     "email": "chae3229@gmail.com"
   },
-  "repository": "",
+  "repository": "https://github.com/woojoung/cursor-agent-boilerplate",
   "license": "MIT",
   "keywords": ["cursor", "agent", "boilerplate", "spec-driven", "tdd", "code-review", "extensible"],
   "rules": ".cursor/rules",

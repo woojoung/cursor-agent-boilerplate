@@ -3,7 +3,7 @@
   "description": "인프라/DevOps 포지션용 Cursor 에이전트 — IaC·Terraform·보안·런북 규칙·명령·스킬·에이전트.",
   "version": "1.0.0",
   "author": { "name": "chae3229", "email": "chae3229@gmail.com" },
-  "repository": "",
+  "repository": "https://github.com/woojoung/cursor-agent-boilerplate",
   "license": "MIT",
   "keywords": ["cursor", "agent", "infra", "terraform", "devops", "runbook"],
   "rules": ".cursor/rules",

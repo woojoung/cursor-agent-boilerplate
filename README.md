@@ -49,9 +49,13 @@
 - **복사**: 사용할 포지션 폴더의 `.cursor/`와 `AGENTS.md`를 실무 레포 루트에 복사해 넣어도 됩니다. 레포별로 규칙을 많이 커스터마이즈할 때 유리합니다.
 - **Slack 봇과 팀 워크플로우**: 실무 레포에 세팅이 끝난 뒤, Slack 봇과 Git 웹훅으로 "기획 → 개발 → 리뷰 → QA → 배포"가 유기적으로 이어지는 방법은 **[docs/INTEGRATION.md](docs/INTEGRATION.md)** 에 정리되어 있습니다.
 
-### 2.4 Cursor 플러그인으로 설치 (마켓플레이스)
+### 2.4 Cursor 플러그인으로 설치 (마켓플레이스 · 팀 사용)
 
-[Cursor 플러그인](https://cursor.com/ko/docs/plugins) 형식으로도 제공됩니다. 각 포지션 폴더마다 `.cursor-plugin/plugin.json`이 있어, [Cursor Marketplace](https://cursor.com/marketplace)에 **포지션별로** 등록한 경우 해당 **플러그인**을 설치해 사용할 수 있습니다. (제출: [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish))
+[Cursor 플러그인](https://cursor.com/ko/docs/plugins) 형식으로도 제공됩니다.
+
+- **한 레포, 7개 플러그인**: 루트에 `.cursor-plugin/marketplace.json`이 있어, 이 레포 URL 하나로 **backend / frontend-web / frontend-mobile / qa / infra / pm / design** 7개 포지션 플러그인을 한 번에 인식할 수 있습니다.
+- **팀에서 사용 (Private 레포 가능)**: 레포를 클론한 뒤, Cursor에서 **플러그인 추가** 시 이 레포 URL(`https://github.com/woojoung/cursor-agent-boilerplate`)을 지정하거나, 로컬에서 클론한 경로의 **포지션 폴더**(예: `.../cursor-agent-boilerplate/backend`)를 플러그인 소스로 지정하면 됩니다. 팀원은 저장소 Collaborator로 추가하면 동일하게 사용할 수 있습니다.
+- **마켓플레이스 공개**: [Cursor Marketplace](https://cursor.com/marketplace)에 포지션별로 등록하려면 [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish)에서 레포 링크를 제출하면 됩니다. (Public 레포 필요.)
 
 ### 2.5 Rules·Commands·Skills·Agents — 뭔지, 언제 쓰는지
 

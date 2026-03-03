@@ -1,0 +1,47 @@
+{
+  "name": "cursor-agent-boilerplate-marketplace",
+  "owner": {
+    "name": "Woojung",
+    "email": "chae3229@gmail.com"
+  },
+  "metadata": {
+    "description": "포지션별(백엔드/프론트/QA/인프라/PM/디자인) Cursor 에이전트 보일러플레이트 — Spec-Driven, TDD, 코드 리뷰, Git 워크플로우."
+  },
+  "plugins": [
+    {
+      "name": "cursor-agent-boilerplate",
+      "source": "backend",
+      "description": "백엔드 Java/Spring·TDD·코드 리뷰·Git 워크플로우."
+    },
+    {
+      "name": "cursor-agent-boilerplate-frontend-web",
+      "source": "frontend-web",
+      "description": "프론트엔드(웹·Next.js) — App Router, 컴포넌트·테스트·접근성."
+    },
+    {
+      "name": "cursor-agent-boilerplate-frontend-mobile",
+      "source": "frontend-mobile",
+      "description": "프론트엔드(모바일·Flutter) — 위젯·ViewModel·테스트."
+    },
+    {
+      "name": "cursor-agent-boilerplate-qa",
+      "source": "qa",
+      "description": "QA/테스트 — 시나리오·회귀범위·버그템플릿·자동화."
+    },
+    {
+      "name": "cursor-agent-boilerplate-infra",
+      "source": "infra",
+      "description": "인프라/DevOps — IaC·Terraform·보안·런북."
+    },
+    {
+      "name": "cursor-agent-boilerplate-pm",
+      "source": "pm",
+      "description": "기획/PM — 스펙·이슈·태스크 분해·리스크."
+    },
+    {
+      "name": "cursor-agent-boilerplate-design",
+      "source": "design",
+      "description": "디자인/브랜딩 — 디자인시스템·토큰·접근성."
+    }
+  ]
+}

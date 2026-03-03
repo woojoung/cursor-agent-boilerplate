@@ -3,7 +3,7 @@
   "description": "QA/테스트 포지션용 Cursor 에이전트 — 시나리오·회귀범위·버그템플릿·자동화 규칙·명령·스킬·에이전트.",
   "version": "1.0.0",
   "author": { "name": "chae3229", "email": "chae3229@gmail.com" },
-  "repository": "",
+  "repository": "https://github.com/woojoung/cursor-agent-boilerplate",
   "license": "MIT",
   "keywords": ["cursor", "agent", "qa", "testing", "scenario", "automation"],
   "rules": ".cursor/rules",
