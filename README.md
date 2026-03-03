@@ -1,5 +1,7 @@
 # cursor-agent-boilerplate
 
+> **Team: Studio Wooree** 🏠
+>
 > **확장 가능한** Cursor IDE용 에이전트 보일러플레이트입니다.  
 > Spec-Driven Development, TDD, 코드 리뷰·Git 워크플로우를 Cursor에서 규칙·명령·스킬·서브에이전트로 사용할 수 있습니다.  
 > 백엔드(Java/Spring) 예시를 포함하며, **포지션(백엔드, 프론트 웹·Next.js, 프론트 모바일·Flutter, QA, 인프라, 기획, 디자인)별로 복사해 커스터마이즈**할 수 있습니다.
