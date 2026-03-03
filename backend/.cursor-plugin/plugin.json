@@ -9,6 +9,7 @@
   "repository": "https://github.com/woojoung/cursor-agent-boilerplate",
   "license": "MIT",
   "keywords": ["cursor", "agent", "boilerplate", "spec-driven", "tdd", "code-review", "extensible"],
+  "logo": "assets/logo.svg",
   "rules": ".cursor/rules",
   "skills": ".cursor/skills",
   "agents": ".cursor/agents",

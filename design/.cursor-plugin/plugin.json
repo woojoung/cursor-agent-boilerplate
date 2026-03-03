@@ -6,6 +6,7 @@
   "repository": "https://github.com/woojoung/cursor-agent-boilerplate",
   "license": "MIT",
   "keywords": ["cursor", "agent", "design", "tokens", "a11y", "design-system"],
+  "logo": "assets/logo.svg",
   "rules": ".cursor/rules",
   "skills": ".cursor/skills",
   "agents": ".cursor/agents",
