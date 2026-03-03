@@ -1,0 +1,13 @@
+---
+description: 디자인/브랜딩 포지션 핵심 규칙. 디자인 시스템·토큰·접근성. .cursor/rules/·AGENTS.md 참조.
+globs:
+alwaysApply: true
+---
+
+# Cursor 작업 규칙 — design
+
+- 항상 **한국어**로 응답한다.
+- **디자인 시스템**: 컴포넌트·토큰 명명은 일관된 체계. 시맨틱 토큰(역할 기반) 우선. 원시값은 글로벌 토큰으로만 노출.
+- **접근성**: 색상 대비(WCAG AA)·포커스·스크린리더. 컴포넌트 규격에 a11y 요구 포함.
+- **규칙 참조**: `.cursor/rules/`(main, design-system, tokens, a11y, agents, skills)와 **AGENTS.md**를 참고한다.
+- Agent 모드에서도 수정 전 작업 범위를 확인하고, md 문서를 직접 수정하면서 진행한다.

@@ -1,0 +1,15 @@
+---
+description: 서브에이전트 — design-reviewer, token-validator, component-spec-writer
+globs:
+alwaysApply: true
+---
+
+# 서브에이전트 (design)
+
+| 서브에이전트 | 용도 |
+|-------------|------|
+| design-reviewer | 컴포넌트·토큰·접근성·브랜드 가이드 리뷰. /design-review 시. |
+| token-validator | 토큰 명명·계층·시맨틱·대비 검증. |
+| component-spec-writer | 컴포넌트 규격 문서·토큰 매핑·a11y 요구 초안 작성. |
+
+`.cursor/agents/<name>.md` 참고.

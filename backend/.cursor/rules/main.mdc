@@ -1,0 +1,14 @@
+---
+description: Cursor에서 이 프로젝트 작업 시 적용할 핵심 규칙. Spec-Driven + TDD 및 .cursor/rules/·AGENTS.md 참조.
+globs: 
+alwaysApply: true
+---
+
+# Cursor 작업 규칙 (cursor-agent-boilerplate)
+
+- 항상 **한국어**로 응답한다.
+- 이 프로젝트는 **Spec-Driven Development**와 **TDD**를 따른다. 작업 시 다음 순서를 지킨다.
+  1. **spec.md** 분석 → **plan.md** 생성 → 사용자 승인 후 **task.md** 생성 → Phase별 구현
+  2. 구현 시 테스트 우선(RED-GREEN-REFACTOR), `.cursor/rules/` 및 루트 **AGENTS.md** 가이드를 참고한다.
+- **규칙·가이드 참조**: `.cursor/rules/`(main, coding-style, git-workflow, agents, security, testing, skills, **agentic**)와 루트 **AGENTS.md**를 참고한다. 에이전틱 엔지니어링 원칙(분해·DoD·실패 복구·사람 최종 판단)은 agentic.mdc 및 docs/AGENTIC_ENGINEERING.md 참고. 작업 유형별로 `.cursor/skills/`의 해당 스킬, 역할별로 `.cursor/agents/` 서브에이전트를 참고한다. 슬래시 명령은 `.cursor/commands/`에 정의되어 있다.
+- **수정 전 확인**: Agent 모드에서도 파일 수정 전에 작업 범위를 확인하고, md 문서를 직접 수정하면서 진행한다.

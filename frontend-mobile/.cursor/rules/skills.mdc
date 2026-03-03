@@ -1,0 +1,12 @@
+---
+description: 스킬 목록 — context-navigation, spec-template, flutter-patterns, widget-design
+globs:
+alwaysApply: true
+---
+
+# 스킬 (frontend-mobile)
+
+- **context-navigation**: AGENTS.md·lib 구조 기반 presentation/data/domain 탐색.
+- **spec-template**: spec.md 템플릿(화면·플로우·제약).
+- **flutter-patterns**: 레이어·상태관리·네비게이션·플랫폼 채널 패턴.
+- **widget-design**: 위젯 분할·ViewModel·재사용·테스트 가능 설계.

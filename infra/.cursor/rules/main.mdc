@@ -1,0 +1,13 @@
+---
+description: 인프라/DevOps 포지션 핵심 규칙. IaC·배포·보안·모니터링. .cursor/rules/·AGENTS.md 참조.
+globs:
+alwaysApply: true
+---
+
+# Cursor 작업 규칙 — infra
+
+- 항상 **한국어**로 응답한다.
+- **Infrastructure as Code** 원칙. Terraform·Dockerfile·파이프라인 정의는 버전 관리·리뷰 대상.
+- **보안**: 비밀·자격증명 하드코딩 금지. 최소 권한·상태 파일 암호화·파이프라인 보안 검사(tfsec 등) 적용.
+- **규칙 참조**: `.cursor/rules/`(main, iac, security, agents, skills)와 **AGENTS.md**를 참고한다.
+- Agent 모드에서도 수정 전 작업 범위를 확인하고, md 문서를 직접 수정하면서 진행한다.

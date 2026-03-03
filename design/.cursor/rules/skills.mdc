@@ -1,0 +1,11 @@
+---
+description: 스킬 — token-naming, component-spec, brand-guide
+globs:
+alwaysApply: true
+---
+
+# 스킬 (design)
+
+- **token-naming**: 토큰 계층·시맨틱 명명·카테고리 규칙.
+- **component-spec**: 컴포넌트 규격·변형·토큰 매핑·a11y 요구.
+- **brand-guide**: 로고·색·타이포·금지 사항.

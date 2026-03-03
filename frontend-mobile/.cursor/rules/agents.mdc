@@ -1,0 +1,16 @@
+---
+description: 서브에이전트 목록 — planner, code-reviewer, widget-designer, test-runner
+globs:
+alwaysApply: true
+---
+
+# 서브에이전트 (frontend-mobile)
+
+| 서브에이전트 | 용도 |
+|-------------|------|
+| planner | spec.md 분석 → plan.md 작성. /plan-from-spec 시. |
+| code-reviewer | 위젯·ViewModel·Repository·테스트 리뷰. /review-code 시. |
+| widget-designer | 화면·위젯 분할·상태·네비게이션 설계. |
+| test-runner | 테스트 실행·실패 분석. |
+
+채팅에서 `/planner`, `/code-reviewer` 등 호출. `.cursor/agents/<name>.md` 참고.

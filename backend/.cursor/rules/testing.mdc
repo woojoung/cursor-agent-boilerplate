@@ -1,0 +1,29 @@
+---
+description: TDD 및 테스트 커버리지 규칙
+globs: "**/*Test.java","**/test/**"
+alwaysApply: false
+---
+
+# 테스트 규칙
+
+## TDD
+
+- 프로덕션 코드 작성 전 테스트 먼저. RED → GREEN → REFACTOR 준수. 테스트 없는 프로덕션 커밋 금지.
+- RED: 실패하는 테스트 작성, 실행해 실패 확인. GREEN: 최소 구현으로 통과. REFACTOR: 품질 개선 후에도 테스트 유지.
+
+## 커버리지
+
+- 라인 80% 이상, 브랜치 70% 이상. 신규 코드 100% 권장. 제외: *Config.java, DTO/Record, 상수, main(), Lombok 생성 코드.
+
+## 테스트 분류
+
+- Unit: UseCase/Service, Domain, Validator, Util. Mockito로 외부 Mock, 빠른 실행.
+- Integration: Repository(@DataJpaTest), Controller(@WebMvcTest), 전체(@SpringBootTest). DB/HTTP Mock 또는 테스트 DB.
+
+## 작성 규칙
+
+- SUT 변수명(sut). 네이밍: method_condition_expectedResult 또는 @DisplayName. Given-When-Then 구조. 다건 검증 시 SoftAssertions. 하나의 테스트 = 하나의 검증.
+
+## 금지
+
+- @Disabled 남용, 테스트 간 의존성, 실제 외부 시스템 호출, Thread.sleep. 커버리지만 위한 무의미 테스트, assertion 없는 테스트.

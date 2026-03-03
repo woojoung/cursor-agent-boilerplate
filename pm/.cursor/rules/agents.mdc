@@ -1,0 +1,15 @@
+---
+description: 서브에이전트 — spec-writer, task-planner, risk-analyzer
+globs:
+alwaysApply: true
+---
+
+# 서브에이전트 (pm)
+
+| 서브에이전트 | 용도 |
+|-------------|------|
+| spec-writer | 스펙(PRD/요구정의) 초안 작성. 목표·문제·요구·AC·엣지케이스. |
+| task-planner | 스펙/이슈 기반 태스크 분해·의존성·우선순위 제안. |
+| risk-analyzer | 의존성·리스크·블로커 정리. KPI/지표 초안 제안. |
+
+`.cursor/agents/<name>.md` 참고.

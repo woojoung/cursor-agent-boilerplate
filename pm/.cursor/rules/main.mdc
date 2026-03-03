@@ -1,0 +1,13 @@
+---
+description: 기획/PM 포지션 핵심 규칙. 스펙·이슈·태스크·리스크. .cursor/rules/·AGENTS.md 참조.
+globs:
+alwaysApply: true
+---
+
+# Cursor 작업 규칙 — pm
+
+- 항상 **한국어**로 응답한다.
+- **스펙**: 문제·목표·성공 지표를 먼저 기술하고, 요구사항·우선순위(P0/P1/P2)를 명확히 한다. 엣지 케이스·제약을 함께 적는다.
+- **이슈·태스크**: 한 이슈당 한 목표. 수용 조건(AC)으로 검증 가능하게. 의존성·리스크 표시.
+- **규칙 참조**: `.cursor/rules/`(main, spec-format, issue-template, agents, skills)와 **AGENTS.md**를 참고한다.
+- Agent 모드에서도 수정 전 작업 범위를 확인하고, md 문서를 직접 수정하면서 진행한다.

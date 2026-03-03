@@ -1,0 +1,15 @@
+---
+description: 서브에이전트 — planner, infra-reviewer, runbook-writer
+globs:
+alwaysApply: true
+---
+
+# 서브에이전트 (infra)
+
+| 서브에이전트 | 용도 |
+|-------------|------|
+| planner | spec/요구 기반 인프라 계획(plan.md). /plan-from-spec 시. |
+| infra-reviewer | Terraform·Dockerfile·파이프라인 보안·모범 사례 리뷰. /review-infra 시. |
+| runbook-writer | 장애·배포·롤백 런북 초안 작성. |
+
+`.cursor/agents/<name>.md` 참고.

@@ -1,0 +1,22 @@
+---
+description: 디자인 시스템 규칙 — 컴포넌트·명명·가이드라인
+globs: "**/*.md","**/tokens/**","**/components/**"
+alwaysApply: false
+---
+
+# 디자인 시스템 규칙 (design)
+
+## 컴포넌트
+
+- **이름**: 목적·역할 기반 (ButtonPrimary, CardSummary). 구현(색·크기)이 아닌 용도.
+- **변형**: variant·size·state로 구분. props/옵션 문서화.
+- **규격**: 사용처·접근성·Do/Don't. 코드·피그마 등 참조 링크.
+
+## 문서화
+
+- 컴포넌트당 한 문서 또는 카탈로그 항목. 예시·토큰 매핑·a11y 노트 포함.
+- 변경 시 changelog·버전 반영.
+
+## 브랜드
+
+- 로고·색·타이포 사용 가이드. 금지 사항 명시.

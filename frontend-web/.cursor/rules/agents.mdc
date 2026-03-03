@@ -1,0 +1,25 @@
+---
+description: 서브에이전트 목록 — planner, code-reviewer, component-designer 등
+globs:
+alwaysApply: true
+---
+
+# 서브에이전트 (frontend-web)
+
+역할별 서브에이전트는 **.cursor/agents/** 에 정의되어 있으며, Cursor가 자동 로드한다.
+
+## 호출 방법
+
+- **명시적**: 채팅에서 `/planner`, `/code-reviewer`, `/component-designer`, `/test-runner` 입력.
+- **문장**: "spec 읽고 plan 만들어줘", "이 컴포넌트 리뷰해줘", "이 화면 접근성 점검해줘" 등.
+
+## 역할 목록
+
+| 서브에이전트 | 용도 |
+|-------------|------|
+| planner | spec.md 분석 → plan.md 작성. /plan-from-spec, plan 요청 시. |
+| code-reviewer | 컴포넌트·훅·아키텍처·접근성·테스트 리뷰. /review-code 시. |
+| component-designer | 컴포넌트 분할·props·접근성·디자인 토큰 연동 설계. |
+| test-runner | 테스트 실행·결과 검증. 테스트 작성·수정 후. |
+
+각 서브에이전트 상세는 `.cursor/agents/<name>.md` 참고.

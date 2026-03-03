@@ -1,0 +1,13 @@
+---
+description: 프론트엔드(웹·Next.js) 포지션 핵심 규칙. Spec-Driven + 컴포넌트·테스트·접근성. .cursor/rules/·AGENTS.md 참조.
+globs:
+alwaysApply: true
+---
+
+# Cursor 작업 규칙 — frontend-web (Next.js)
+
+- 항상 **한국어**로 응답한다.
+- 이 포지션은 **Spec-Driven Development**를 따른다. spec.md 분석 → plan.md 생성 → 승인 후 task.md → Phase별 구현.
+- **Next.js App Router** 기준: app/ 디렉터리 사용, Server Components 기본·Client Components는 상호작용 필요 시만. 기능 단위 폴더 구조 권장.
+- **규칙 참조**: `.cursor/rules/`(main, coding-style, testing, a11y, agents, skills, **agentic**)와 **AGENTS.md**를 참고한다. 에이전틱 엔지니어링 원칙은 agentic.mdc 및 docs/AGENTIC_ENGINEERING.md 참고. `.cursor/skills/`, `.cursor/agents/`, `.cursor/commands/` 활용.
+- Agent 모드에서도 수정 전 작업 범위를 확인하고, md 문서를 직접 수정하면서 진행한다.

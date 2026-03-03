@@ -1,0 +1,22 @@
+---
+description: Flutter/Dart 테스트 — 단위·위젯·통합
+globs: "**/*_test.dart","**/test/**"
+alwaysApply: false
+---
+
+# 테스트 규칙 (frontend-mobile)
+
+## 테스트 분류
+
+- **단위**: ViewModel, Repository, 유틸. Flutter 의존성 없이 mocktail 등으로 Mock. 빠른 실행.
+- **위젯**: widget_test. ViewModel을 Fake로 주입해 위젯만 검증. pumpWidget, find, expect.
+- **통합**: integration_test. 주요 플로우만. 실제/테스트 백엔드 정책에 따름.
+
+## 작성 원칙
+
+- ViewModel 단위 테스트로 입력·상태·부수효과 검증. 위젯 테스트는 사용자 동작(탭·입력)·표시 결과.
+- Given-When-Then. 한 테스트당 한 목표.
+
+## 금지
+
+- 테스트 간 의존성. 실제 네트워크·DB 호출. 과도한 pump/pumpAndSettle.

@@ -1,0 +1,28 @@
+---
+description: Git 브랜치 전략, 커밋 컨벤션, MR 규칙
+globs: 
+alwaysApply: true
+---
+
+# GitLab 워크플로우 규칙
+
+## 브랜치 네이밍
+
+`{type}/{gitlab_account}/{description}` — type: feature, bugfix, hotfix, refactor, test. description은 소문자·하이픈. 예: feature/john.doe/user-authentication.
+
+## 커밋
+
+- 형식: `{type}: {subject}`. type: feat, fix, refactor, test, docs, style, chore, perf.
+- 좋은 예: feat: JWT 기반 사용자 인증 구현 (본문에 변경 항목).
+- 금지: main/develop 직접 커밋, 테스트 실패 상태 커밋, 민감정보 포함, "수정"/"fix"/"WIP" 등 무의미 메시지.
+
+## MR
+
+- 조건: 테스트 통과, 커버리지 80% 이상, 코드 리뷰 완료, CI 통과.
+- Description: Summary, Changes, Test 체크리스트, Code Review Result 표 포함. /mr-gitlab 사용 시 리뷰 결과 자동 포함.
+- 분기: 피처 브랜치에서 푸시/스테이지 있으면 commit+push+MR. 루트 브랜치에서 변경 있으면 feature 브랜치 생성 후 동일.
+- 금지: 테스트 미통과 MR, 커버리지 미달 머지, 리뷰 없이 머지, force push.
+
+## 워크플로우
+
+1. develop에서 feature 브랜치 생성 → 2. TDD 개발 → 3. 커밋 → 4. /mr-gitlab 또는 MR 설명 초안 → 5. 리뷰·수정 → 6. 머지 → 7. 브랜치 정리.

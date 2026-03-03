@@ -1,0 +1,13 @@
+---
+description: QA/테스트 포지션 핵심 규칙. 시나리오·자동화·버그 리포트. .cursor/rules/·AGENTS.md 참조.
+globs:
+alwaysApply: true
+---
+
+# Cursor 작업 규칙 — qa
+
+- 항상 **한국어**로 응답한다.
+- 요구사항·스펙에 기반한 **테스트 시나리오·케이스** 작성. 한 케이스당 하나의 목표·검증 가능한 기대 결과.
+- **자동화**: 반복·회귀 테스트는 자동화 우선. 수동 시나리오는 재현 절차·데이터 명시.
+- **규칙 참조**: `.cursor/rules/`(main, test-scenario, automation, agents, skills)와 **AGENTS.md**를 참고한다.
+- Agent 모드에서도 수정 전 작업 범위를 확인하고, md 문서를 직접 수정하면서 진행한다.

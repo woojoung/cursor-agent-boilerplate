@@ -1,0 +1,23 @@
+---
+description: 디자인 토큰 명명·계층 — 글로벌·시맨틱·컴포넌트
+globs: "**/tokens/**","**/*.tokens.*","**/*.json"
+alwaysApply: false
+---
+
+# 디자인 토큰 규칙 (design)
+
+## 계층
+
+1. **글로벌(원시)**: 색·간격·타이포·보더 등 raw 값. 예: `color.gray.500`, `space.4`, `font.size.sm`.
+2. **시맨틱(역할)**: 용도 기반. 예: `color.primary`, `color.text.inverse`, `surface.card`.
+3. **컴포넌트**: 컴포넌트 전용. 예: `button.primary.background`, `input.border.error`.
+
+## 명명
+
+- **일관된 케이스**: kebab-case 또는 dot.notation (프로젝트 통일). 카테고리 먼저 → 역할 → 변형.
+- **시맨틱 우선**: `--color-primary` O, `--color-blue-600`는 원시만. 테마 변경 시 시맨틱만 교체 가능하게.
+- **금지**: 모호한 이름 (`color1`, `spacing-small`만 있고 체계 없음).
+
+## 접근성
+
+- 대비 요구 색상은 시맨틱으로 (예: `text.on.primary`, `border.focus`). WCAG AA 기준 명시.

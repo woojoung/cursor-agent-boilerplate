@@ -1,0 +1,11 @@
+---
+description: 스킬 — spec-draft, task-breakdown, risk-dependency
+globs:
+alwaysApply: true
+---
+
+# 스킬 (pm)
+
+- **spec-draft**: 목표·문제·요구·성공 지표·엣지케이스 초안 작성.
+- **task-breakdown**: 스펙→이슈/태스크 분해·AC·의존성.
+- **risk-dependency**: 의존성·리스크·블로커·KPI 정리.

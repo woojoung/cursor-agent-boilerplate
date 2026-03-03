@@ -1,0 +1,87 @@
+---
+description: Java/Spring Boot 코딩 스타일 및 Clean Architecture, 네이밍, CQRS 규칙
+globs: "**/*.java"
+alwaysApply: false
+---
+
+# Java 코딩 스타일 규칙
+
+> Java/Spring Boot 프로젝트의 코딩 스타일과 컨벤션을 정의합니다.
+
+## 아키텍처 규칙
+
+### Clean Architecture 필수
+
+```
+레이어 구조:
+├── domain/        → 외부 의존성 없음, 순수 Java
+├── application/   → domain만 의존
+├── adapter/       → application 의존
+└── config/        → Spring 설정
+
+의존성 방향:
+adapter → application → domain
+(외부 → 내부)
+```
+
+### Entity vs Model 분리
+
+```
+Entity (JPA):       Model (Domain):
+├── @Entity        ├── 불변 객체 (Record)
+├── DB 매핑        ├── 비즈니스 로직
+├── Repository 반환 └── Service 반환
+└── 내부 필드 노출 금지
+```
+
+```java
+// ❌ Entity를 직접 반환
+public UserEntity getUser(Long id) { ... }
+
+// ✅ Model로 변환하여 반환
+public User getUser(Long id) {
+    return mapper.toModel(userRepository.findById(id));
+}
+```
+
+### Policy 패턴
+
+비즈니스 규칙은 Policy 클래스로 분리합니다.
+
+```java
+@Component
+public class WorkspaceOwnershipPolicy {
+    public void validate(String workspaceId, String userId) {
+        if (!repository.existsByOwner(workspaceId, userId)) {
+            throw new AccessDeniedException("접근 권한 없음");
+        }
+    }
+}
+ownershipPolicy.validate(workspaceId, userId);
+```
+
+### CQRS 패턴 적용
+
+- Command (상태 변경): CreateUserCommand, 반환 void 또는 ID
+- Query (조회): GetUserQuery, 반환 DTO/Response
+
+## 네이밍 컨벤션
+
+- UseCase: `{Action}{Domain}UseCase`, Command/Query: `{Action}{Domain}Command/Query`, Response: `{Domain}Response`, Controller: `{Domain}Controller`, Repository: `{Domain}Repository`, Entity: `{Domain}Entity`, Exception: `{Domain}{Type}Exception`
+- 메서드: 조회 find/get/search, 생성 create, 수정 update, 삭제 delete, 검증 validate/verify/check/is/has/can
+- Boolean: isActive, hasPermission, canDelete. 컬렉션 복수형(users, permissions)
+
+## 코드 품질
+
+- 메서드: 30줄 권장, 파라미터 3개 이내, Cyclomatic Complexity 10 이하
+- 클래스: 200줄 권장, 필드 7개·의존성 5개 이내
+- **의존성 주입**: 생성자 주입 필수. 필드 주입(@Autowired) 금지
+- Java 21: DTO에 Record, instanceof 패턴 매칭, switch 표현식, Text Block, Optional 반환
+
+## 금지
+
+- 매직 넘버/스트링, Entity 직접 반환, God Class, Service Locator, 순환 의존, 필드 주입
+
+## 포맷팅
+
+- 들여쓰기 4 spaces, 줄 길이 120자, import 와일드카드 금지

@@ -1,0 +1,49 @@
+---
+description: Flutter/Dart 코딩 스타일, 레이어 구조, 위젯·상태 관리 규칙
+globs: "**/*.dart"
+alwaysApply: false
+---
+
+# Flutter/Dart 코딩 스타일 규칙
+
+## 프로젝트 구조 (기능/레이어)
+
+```
+lib/
+├── main.dart
+├── app.dart
+├── core/                 # 공통 유틸, 상수, 테마
+├── data/                 # Data 레이어
+│   ├── repositories/
+│   ├── datasources/
+│   └── models/
+├── domain/               # (선택) 복잡한 비즈니스 로직
+│   └── entities/
+└── presentation/         # UI 레이어
+    ├── screens/          # 화면 단위
+    │   └── {feature}/
+    │       ├── {feature}_screen.dart
+    │       ├── {feature}_viewmodel.dart
+    │       └── widgets/
+    └── widgets/          # 공통 위젯
+```
+
+## 레이어 원칙
+
+- **UI**: ViewModel이 로직·상태. View(위젯)는 표시·사용자 입력만. 위젯 내부에 비즈니스 로직 두지 않기.
+- **Data**: Repository 패턴. 데이터 소스(API·로컬) 추상화. Model·Entity 구분.
+- **상태 관리**: ChangeNotifier/Provider, Riverpod, Bloc 등 프로젝트 선택안 준수. setState 남용 지양.
+
+## 네이밍
+
+- 파일: snake_case. 클래스: PascalCase. 변수·함수: lowerCamelCase. 상수: lowerCamelCase 또는 upperCamelCase(프로젝트 일관성).
+- 위젯: XxxScreen, XxxPage, XxxWidget. ViewModel: XxxViewModel. Repository: XxxRepository.
+
+## 코드 품질
+
+- 위젯: 한 위젯당 200줄 이내 권장. 분할 시 widgets/ 하위로. build 메서드 안 로직 최소화.
+- 의존성: 생성자 주입·테스트 시 Mock/Fake 주입 가능하게.
+
+## 금지
+
+- 위젯 안에 API 호출·복잡한 분기. 전역 변수로 상태 공유. 불필요한 rebuild 유발 패턴.

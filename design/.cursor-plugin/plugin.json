@@ -1,0 +1,13 @@
+{
+  "name": "cursor-agent-boilerplate-design",
+  "description": "디자인/브랜딩 포지션용 Cursor 에이전트 — 디자인시스템·토큰·접근성 규칙·명령·스킬·에이전트.",
+  "version": "1.0.0",
+  "author": { "name": "chae3229", "email": "chae3229@gmail.com" },
+  "repository": "",
+  "license": "MIT",
+  "keywords": ["cursor", "agent", "design", "tokens", "a11y", "design-system"],
+  "rules": ".cursor/rules",
+  "skills": ".cursor/skills",
+  "agents": ".cursor/agents",
+  "commands": ".cursor/commands"
+}

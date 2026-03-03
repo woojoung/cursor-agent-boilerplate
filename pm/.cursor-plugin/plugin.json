@@ -1,0 +1,13 @@
+{
+  "name": "cursor-agent-boilerplate-pm",
+  "description": "기획/PM 포지션용 Cursor 에이전트 — 스펙·이슈·태스크 분해·리스크 규칙·명령·스킬·에이전트.",
+  "version": "1.0.0",
+  "author": { "name": "chae3229", "email": "chae3229@gmail.com" },
+  "repository": "",
+  "license": "MIT",
+  "keywords": ["cursor", "agent", "pm", "spec", "prd", "task-breakdown"],
+  "rules": ".cursor/rules",
+  "skills": ".cursor/skills",
+  "agents": ".cursor/agents",
+  "commands": ".cursor/commands"
+}

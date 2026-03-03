@@ -1,0 +1,51 @@
+---
+description: Next.js/React·TypeScript 코딩 스타일, App Router, 컴포넌트 분리 규칙
+globs: "**/*.tsx","**/*.ts","**/*.jsx","**/*.js"
+alwaysApply: false
+---
+
+# Next.js/React 코딩 스타일 규칙
+
+> Next.js App Router + TypeScript 프로젝트의 실무 관례를 정의합니다.
+
+## 프로젝트 구조
+
+```
+app/                    # App Router (라우트, layout, loading, error)
+├── (routes)/           # 라우트 그룹
+├── layout.tsx
+├── page.tsx
+├── loading.tsx
+├── error.tsx
+├── not-found.tsx
+components/              # 기능/도메인별 재사용 컴포넌트
+├── ui/                  # 기본 UI (Button, Input, Card)
+├── feature/             # 기능 단위 (UserProfile, CartSummary)
+├── layout/              # Header, Footer, Sidebar
+lib/                     # 유틸, API 클라이언트, 상수
+hooks/                   # 커스텀 훅
+types/                   # 공통 타입
+styles/                  # 전역·모듈 CSS
+```
+
+## 컴포넌트 원칙
+
+- **Server Component 기본**: 데이터 fetch·정적 렌더는 Server Component. "use client"는 이벤트·상태·브라우저 API 필요 시만.
+- **컨테이너/프레젠테이션 분리**: 데이터·상태는 컨테이너(또는 page), 순수 UI는 프레젠테이션 컴포넌트로 분리.
+- **한 파일 한 컴포넌트** 권장. 단, 작은 하위 컴포넌트는 동일 파일 하단에 두어도 됨.
+- **코로케이션**: 관련 컴포넌트·스타일·테스트를 같은 feature 폴더에 두기.
+
+## 네이밍
+
+- 컴포넌트·파일: PascalCase (UserProfile.tsx). 훅: use + CamelCase (useAuth.ts). 유틸: camelCase. 상수: UPPER_SNAKE 또는 camelCase.
+- 폴더: kebab-case 또는 camelCase (프로젝트 일관성 유지).
+
+## 코드 품질
+
+- 컴포넌트: 200줄 이내 권장. props 5개 초과 시 객체로 묶거나 컴포넌트 분할.
+- 훅: 단일 책임. 의존성 배열 정확히 명시.
+- 매직 넘버/문자열 금지. 상수·env 변수 사용.
+
+## 금지
+
+- pages/ 디렉터리 신규 사용 (App Router만 사용). 클라이언트에서 불필요한 "use client". prop drilling 과다 시 Context 또는 상태 라이브러리 검토.

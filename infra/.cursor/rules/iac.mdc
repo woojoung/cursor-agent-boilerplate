@@ -1,0 +1,25 @@
+---
+description: IaC 규칙 — Terraform·Docker·폴더 구조·상태 관리
+globs: "**/*.tf","**/Dockerfile*","**/*.yml","**/*.yaml"
+alwaysApply: false
+---
+
+# IaC 규칙 (infra)
+
+## Terraform
+
+- **모듈화**: 환경·리소스 유형별 모듈. root에서 module 호출. 재사용 가능하게.
+- **상태**: 원격 백엔드(S3+GCS 등)·락(DynamoDB 등). 상태 파일에 민감 정보 없도록.
+- **변수**: default 최소화. tfvars·환경 변수로 주입. 설명(description) 필수.
+- **네이밍**: 리소스·변수 일관된 컨벤션. 환경·프로젝트 접두어.
+
+## Docker
+
+- **이미지**: 멀티스테이지 빌드. 불필요한 레이어·패키지 제거. non-root 사용자 권장.
+- **태그**: 버전·SHA 태깅. latest 단독 사용 지양.
+- **보안**: 베이스 이미지 정기 업데이트. CVE 스캔 파이프라인 연동.
+
+## 파이프라인
+
+- **정의**: YAML 등 버전 관리. 단계별 job. 비밀은 파이프라인 시크릿/볼트 사용.
+- **검증**: Terraform validate·plan, tfsec, Docker build·스캔을 CI에 포함.

@@ -1,0 +1,34 @@
+---
+description: 서브에이전트(.cursor/agents/) 목록 및 호출 시점 — planner, code-reviewer, security-reviewer, build-fixer 등
+globs: 
+alwaysApply: true
+---
+
+# 서브에이전트 (Cursor)
+
+역할별 서브에이전트는 **.cursor/agents/** 에 정의되어 있으며, Cursor가 자동으로 로드한다. [서브에이전트 문서](https://cursor.com/ko/docs/context/subagents)
+
+## 호출 방법
+
+- **명시적**: 채팅에서 `/planner`, `/code-reviewer`, `/security-reviewer`, `/build-fixer`, `/context-updater`, `/coverage-analyzer`, `/tdd-guide`, `/test-runner`, `/test-writer` 입력.
+- **자동 위임**: 에이전트가 작업 복잡도·description에 따라 위임. (description에 "Use proactively" 포함된 서브에이전트는 자동 호출 유도)
+
+## 역할 목록
+
+| 서브에이전트 | 용도 |
+|-------------|------|
+| planner | spec.md 분석 → plan.md 작성. plan 요청·/plan-from-spec 시. |
+| code-reviewer | 아키텍처·코드 품질·테스트·네이밍 리뷰. /review-code, /mr-gitlab 시. |
+| security-reviewer | OWASP·Spring Security 보안 검토. 리뷰 후 순차 실행. |
+| build-fixer | 빌드·테스트 실패 분석 및 수정. 실패 시 자동 적용 유도. |
+| context-updater | AGENTS.md 갱신. 파일/폴더 구조 변경 후. |
+| coverage-analyzer | JaCoCo 분석, 테스트 우선순위 제안. 커버리지 개선 요청 시. |
+| tdd-guide | RED-GREEN-REFACTOR 안내. 프로덕션 코드 작성 요청 시. |
+| test-runner | 테스트 실행·결과 검증. 테스트 작성 후. |
+| test-writer | 단위 테스트 작성. coverage-analyzer 연계 시. |
+
+## 연계 순서
+
+- /plan-from-spec → planner. /review-code, /mr-gitlab → code-reviewer → security-reviewer. 빌드 실패 → build-fixer. 구조 변경 → context-updater. 커버리지 개선 → coverage-analyzer → test-writer → test-runner.
+
+각 서브에이전트의 상세는 `.cursor/agents/<name>.md` 본문 참고.

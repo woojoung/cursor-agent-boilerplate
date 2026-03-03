@@ -1,0 +1,25 @@
+---
+description: 보안 규칙 — 인증/인가, 입력값 검증, 민감정보 보호, OWASP 체크
+globs: "**/*.java"
+alwaysApply: false
+---
+
+# 보안 규칙
+
+## 필수
+
+- **인증/인가**: 모든 API 인증 검증, 리소스 접근 시 권한 검증, 비밀번호 BCrypt. @PreAuthorize 등 활용.
+- **입력값 검증**: 모든 사용자 입력 Bean Validation. SQL Injection 방지 위해 파라미터 바인딩(@Param).
+- **민감정보**: 비밀번호·토큰 로깅 금지. 시크릿 외부화(환경변수, Vault). 에러 응답에 내부 정보 노출 금지.
+
+## 금지
+
+- 하드코딩 시크릿. 문자열 연결 쿼리(SQL/JPQL Injection). 평문 비밀번호 비교. 에러 메시지에 내부 정보.
+
+## OWASP 체크
+
+- A01 Access Control: 엔드포인트 인증, 리소스 소유자 검증. A02 Cryptographic: BCrypt, HTTPS. A03 Injection: 파라미터 바인딩, 입력 검증. A05 Misconfiguration: 기본 계정 변경, 프로덕션 디버그 비활성화. A07 Auth Failures: 비밀번호 정책, 계정 잠금. A09 Logging: 인증 실패 로깅, 민감정보 로깅 금지.
+
+## Spring Security
+
+- SecurityFilterChain: 보안 헤더, authorizeHttpRequests. PasswordEncoder: BCrypt(12). 프로덕션: show-sql false, include-stacktrace never.

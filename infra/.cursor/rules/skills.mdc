@@ -1,0 +1,11 @@
+---
+description: 스킬 — terraform-patterns, pipeline-design, runbook-template
+globs:
+alwaysApply: true
+---
+
+# 스킬 (infra)
+
+- **terraform-patterns**: 모듈·상태·변수·보안(tfsec) 패턴.
+- **pipeline-design**: CI/CD 단계·검증·배포·승인 게이트.
+- **runbook-template**: 장애 유형별 진단·조치·롤백 템플릿.

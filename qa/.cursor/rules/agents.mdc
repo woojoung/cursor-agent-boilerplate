@@ -1,0 +1,15 @@
+---
+description: 서브에이전트 — scenario-writer, test-planner, bug-analyzer
+globs:
+alwaysApply: true
+---
+
+# 서브에이전트 (QA)
+
+| 서브에이전트 | 용도 |
+|-------------|------|
+| scenario-writer | 스펙/요구사항 기반 테스트 시나리오·케이스 초안 작성. |
+| test-planner | 릴리스·스프린트별 테스트 범위·우선순위·회귀 범위 수립. |
+| bug-analyzer | 버그 리포트·재현 절차·영향도 정리. 재현 절차 템플릿 제안. |
+
+`.cursor/agents/<name>.md` 참고.

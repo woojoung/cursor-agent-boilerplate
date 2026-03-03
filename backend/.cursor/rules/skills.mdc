@@ -1,0 +1,31 @@
+---
+description: 에이전트 스킬 적용 — .cursor/skills/에 있는 스킬 목록 및 작업 유형별 매핑
+globs: 
+alwaysApply: true
+---
+
+# Skills (에이전트 스킬)
+
+Cursor는 **.cursor/skills/** 에서 스킬을 자동으로 찾아 에이전트에 등록한다. 채팅에서 `/` 입력 후 스킬 이름을 검색해 수동 실행하거나, 에이전트가 관련 있다고 판단하면 자동 적용된다. ([Cursor 스킬 문서](https://cursor.com/ko/docs/context/skills))
+
+## 스킬 목록 (`.cursor/skills/`)
+
+| 스킬 이름 | 설명 | 사용 시점 예시 |
+|----------|------|----------------|
+| context-navigation | AGENTS.md 기반 코드 맥락 네비게이션 | 코드베이스 구조 파악, 기능 추가 위치, 의존성 분석 |
+| java-code-style | Java/Spring Clean Architecture, CQRS, 네이밍 | Java 코드 작성·리뷰 |
+| spec-template | spec.md 템플릿 및 Spec-Driven 시작 | Spec 초안, plan 생성 전 요구사항 정리 |
+| tdd-workflow | TDD, RED-GREEN-REFACTOR | 테스트 우선 구현, 리팩토링 |
+| gitlab-workflow | Git 브랜치·커밋·MR 절차 | 커밋 메시지, MR 설명, 브랜치 전략 |
+| db-review | JPA·QueryDSL·Flyway 리뷰 | DB 스키마·쿼리 변경 리뷰 |
+| security-checklist | 보안 체크리스트 | 보안 검토, OWASP 체크 |
+| test-patterns | 테스트 패턴 | 단위/통합 테스트 작성 |
+| verification-loop | 검증 루프 | 빌드·테스트 검증 절차 |
+| client-protocol-sync | Client/Protocol 동기화 | API 클라이언트·프로토콜 생성 |
+
+## 호출 방법
+
+- **수동**: 채팅에서 `/context-navigation`, `/spec-template` 등 스킬 이름 입력.
+- **자동**: 에이전트가 대화 맥락에 따라 해당 스킬을 선택해 적용.
+
+스킬 정의는 **.cursor/skills/** 에만 두며, Cursor가 여기서 자동 로드한다.

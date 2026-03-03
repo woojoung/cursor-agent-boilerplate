@@ -1,0 +1,15 @@
+---
+description: 웹 접근성(a11y) — WCAG·시맨틱·키보드·스크린리더
+globs: "**/*.tsx","**/*.jsx","**/*.html"
+alwaysApply: false
+---
+
+# 접근성 규칙 (frontend-web)
+
+- **시맨틱 HTML**: button, nav, main, header, footer, section, article 적절히 사용. div/span 남용 지양.
+- **이미지**: alt 필수. 장식용은 alt="". 복잡한 이미지는 주변 문맥 또는 longdesc 고려.
+- **폼**: label과 input 연결 (id/for 또는 감싸기). 에러 메시지·필수 표시 명시. aria-describedby로 도움말 연결.
+- **포커스**: 포커스 가능 요소는 키보드로 접근 가능. 포커스 링(outline) 제거 시 대체 스타일 제공.
+- **색상 대비**: WCAG AA 기준(일반 4.5:1, 큰 텍스트 3:1). 색상만으로 정보 전달 금지.
+- **동적 영역**: 라이브 리전(aria-live)으로 변경 사항 알림. next/link·페이지 전환 시 제목·요약으로 스크린리더 안내.
+- **ESLint**: eslint-plugin-jsx-a11y, eslint-config-next 활용해 누락 요소·잘못된 aria 사용 검사.

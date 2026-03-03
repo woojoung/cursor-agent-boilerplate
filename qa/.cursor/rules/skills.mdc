@@ -1,0 +1,11 @@
+---
+description: 스킬 — scenario-writing, regression-scope, bug-report-template
+globs:
+alwaysApply: true
+---
+
+# 스킬 (QA)
+
+- **scenario-writing**: 요구사항→시나리오 변환, 경계·예외·엣지 케이스 도출.
+- **regression-scope**: 변경 영향 분석·회귀 테스트 범위·우선순위 제안.
+- **bug-report-template**: 재현 절차·환경·기대/실제·심각도 템플릿.

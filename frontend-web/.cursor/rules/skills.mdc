@@ -1,0 +1,14 @@
+---
+description: 스킬(.cursor/skills/) 목록 — context-navigation, spec-template, nextjs-patterns 등
+globs:
+alwaysApply: true
+---
+
+# 스킬 (frontend-web)
+
+- **context-navigation**: AGENTS.md·폴더 구조 기반으로 app/components/lib 맥락 파악.
+- **spec-template**: spec.md 템플릿·작성 가이드. Spec-Driven 시작 시.
+- **nextjs-patterns**: App Router, Server/Client Component, 데이터 fetch·캐싱 패턴.
+- **component-design**: 컴포넌트 분할·재사용·접근성·테스트 가능 설계.
+
+채팅에서 `/` 입력 후 스킬 선택 또는 "AGENTS.md 보고 구조 파악해줘" 등 문장으로 호출.
