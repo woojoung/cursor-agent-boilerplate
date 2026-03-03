@@ -11,6 +11,7 @@
 | **[PUBLISH_GITHUB_AND_PLUGIN.md](PUBLISH_GITHUB_AND_PLUGIN.md)** | **GitHub 업로드·Cursor 플러그인 등록** — chae3229@gmail.com 계정으로 올리고 마켓플레이스 제출 절차. |
 | **[PROMPTS.md](PROMPTS.md)** | Cursor 대화창에서 복사해 쓸 수 있는 **프롬프트 모음**. 포지션별·Slack·역할 정의 레포 참고 맥락 포함. |
 | **[INTEGRATION.md](INTEGRATION.md)** | **실무 레포 적용**(플러그인 vs 복사)·**Slack 봇 연동**·팀 워크플로우(기획→개발→리뷰→QA→배포) 가이드. |
+| **[ADD_PLUGIN_TO_REPO.md](ADD_PLUGIN_TO_REPO.md)** | **특정 레포에서 플러그인 추가** — Cursor에서 작업할 레포에 pm/design/frontend-mobile 등 포지션 플러그인을 URL·로컬·복사로 쓰는 방법. |
 | **[EXTENSIBILITY.md](EXTENSIBILITY.md)** | **확장성** — 포지션별 도구·MCP·기술 스택·Slack 추가. Agentation, Figma/Stitch MCP 예시. |
 | **[SETUP_REPOS.md](SETUP_REPOS.md)** | **포지션별 기본 레포 세팅** — 백엔드(Java/Spring), 프론트 웹(Next.js), 모바일(Flutter) 생성 절차. .cursor 기술 스택 검증 요약. |
 | **[AGENTIC_ENGINEERING.md](AGENTIC_ENGINEERING.md)** | **에이전틱 엔지니어링** — 에이전트가 똑똑·효율적으로 작업하기 위한 9가지 원칙(분해·컨텍스트·DoD·실패 복구·관찰 가능성·메모리·병렬·추상화·감각). GeekNews 기사 반영. |
