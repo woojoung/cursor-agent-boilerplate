@@ -34,6 +34,8 @@
 
 **참고**: [Figma to Cursor MCP](https://cursorideguide.com/use-cases/figma-to-cursor-with-mcp) · [Figma MCP Server](https://builder.io/blog/figma-mcp-server)
 
+**이 보일러플레이트**: Talk to Figma 등 **플러그인+채널** 방식과 전제 점검·구현·검증 루프는 [docs/process/figma-mcp-handoff.md](../docs/process/figma-mcp-handoff.md) 및 `design/.cursor/skills/figma-to-code-workflow/` 를 참고.
+
 ---
 
 ## 2. Stitch (디자인 → 코드)

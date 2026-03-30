@@ -11,8 +11,8 @@
 ## 규칙·명령·스킬·에이전트
 
 - **Rules**: `.cursor/rules/` (main, design-system, tokens, a11y, agents, skills) — 디자인 시스템·토큰·접근성.
-- **Commands**: `/start`(역질문), `/component-spec`, `/design-review`.
-- **Skills**: token-naming, component-spec, brand-guide.
+- **Commands**: `/start`(역질문), `/component-spec`, `/design-review`, `/figma-mcp-precheck`, `/ds-canvas-build`, `/ds-canvas-verify`.
+- **Skills**: token-naming, component-spec, brand-guide, figma-to-code-workflow, design-system-visual-canvas.
 - **Agents**: design-reviewer, token-validator, component-spec-writer.
 
 ### 역질문·템플릿 (포지션을 모르는 사용자용)
@@ -29,4 +29,5 @@
 ## 확장 (도구·MCP)
 
 - **TOOLS_AND_MCP.md**: Figma MCP, Stitch 등 **디자인→프론트엔드** 연동 도구·MCP 목록·연동 방법. 디자이너 에이전트가 만든 UI를 Figma에 두고 프론트엔드에서 MCP로 사용하는 흐름을 이 파일에 정리할 수 있습니다.
+- **핸드오프 프로세스**: [docs/process/figma-mcp-handoff.md](../docs/process/figma-mcp-handoff.md) — 채널·MCP 전제 점검, Figma→코드 스킬, DS 시각 캔버스 명령과의 연결.
 - 전체 확장 가이드: [docs/EXTENSIBILITY.md](../docs/EXTENSIBILITY.md).

@@ -6,6 +6,7 @@
 
 | 문서 | 용도 |
 |------|------|
+| **[process/figma-mcp-handoff.md](process/figma-mcp-handoff.md)** | **Figma MCP 핸드오프** — 채널·전제 점검, design 포지션 스킬·명령(`figma-to-code-workflow`, DS 캔버스) 위치와 워크플로. |
 | **[FLOW_OVERVIEW.md](FLOW_OVERVIEW.md)** | **전체 흐름 시각화** — 보일러플레이트·Slack·실무 레포·Phase 2a·프로토콜·오케스트레이터 역할을 다이어그램으로. |
 | **[GETTING_STARTED_CHECKLIST.md](GETTING_STARTED_CHECKLIST.md)** | **바로 해보기 전** — 완성도 요약, 공통·포지션별 연동·세팅(Slack, Cursor, Figma, Stitch 등) 체크리스트. |
 | **[IS_THIS_AN_AGENT.md](IS_THIS_AN_AGENT.md)** | **에이전트라고 부를 수 있나?** — 서브에이전트·역할 정의·에이전트 보일러플레이트 의미 정리. |
